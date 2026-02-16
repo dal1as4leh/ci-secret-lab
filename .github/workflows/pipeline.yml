@@ -9,7 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Pipeline works
-        run: echo "Hello Dalia"
+      - name: Print secret length
+        run: |
+          echo "Secret length:"
+          echo ${#MY_SECRET}
+        env:
+          MY_SECRET: ${{ secrets.MY_SECRET }}
 
-        
