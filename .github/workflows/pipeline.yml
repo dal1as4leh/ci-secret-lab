@@ -9,17 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-
-      - name: Print secret (for test)
-        run: |
-          echo "Secret length:"
-          echo ${#MY_SECRET}
-        env:
-          MY_SECRET: ${{ secrets.MY_SECRET }}
+      - name: Pipeline works
+        run: echo "Hello Dalia"
+        
